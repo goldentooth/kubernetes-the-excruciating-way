@@ -6,6 +6,9 @@ src = "src"
 title = "Kubernetes, the _Excruciating_ Way"
 description = "A low-level, step-by-step, thoroughly-documented descent into Hell."
 
+[build]
+create-missing = false
+
 [output.html]
 mathjax-support = true
 site-url = "/kubernetes-the-excruciating-way/"
