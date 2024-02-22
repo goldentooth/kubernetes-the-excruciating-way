@@ -7,7 +7,7 @@ title = "Kubernetes, the _Excruciating_ Way"
 description = "A low-level, step-by-step, thoroughly-documented descent into Hell."
 
 [build]
-create-missing = false
+create-missing = true
 
 [output.html]
 mathjax-support = true
