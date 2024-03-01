@@ -10,3 +10,4 @@
 - [Networking](./008_networking.md)
 - [Configuring Packages](./009_configuring_packages.md)
 - [Installing Packages](./010_installing_packages.md)
+- [`kubeadm init`](./011_kubeadm_init.md)
