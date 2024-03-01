@@ -7,3 +7,5 @@
 - [Cluster Roles and Responsibilities](./005_cluster_roles.md)
 - [Load Balancer](./006_load_balancer.md)
 - [Container Runtime](./007_container_runtime.md)
+- [Networking](./008_networking.md)
+- [Configuring Packages](./009_configuring_packages.md)

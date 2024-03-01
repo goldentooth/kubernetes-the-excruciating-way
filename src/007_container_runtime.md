@@ -8,4 +8,4 @@ I used Jeff Geerling's [Ansible role](https://github.com/geerlingguy/ansible-rol
 
 That said, the actual steps are not very demanding (aside from the fact that they will need to be executed once on each Kubernetes host). They intersect largely with [Docker Engine's installation instructions](https://docs.docker.com/engine/install/debian/) (since Docker, not the Containerd project, maintains the package repository), which I won't repeat here.
 
-The container runtime installation is handled in my [`deploy_kubernetes.yaml` playbook](https://github.com/goldentooth/cluster/blob/main/playbooks/deploy_kubernetes.yaml), which is where we'll be spending a lot of time in subsequent sections.
+The container runtime installation is handled in my [`install_k8s_packages.yaml` playbook](https://github.com/goldentooth/cluster/blob/main/playbooks/install_k8s_packages.yaml), which is where we'll be spending some time in subsequent sections.
