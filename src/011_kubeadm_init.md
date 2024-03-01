@@ -351,3 +351,5 @@ CoreDNS provides DNS services for the internal cluster network, allowing pods to
 ### `show-join-command`
 
 This phase simplifies the process of expanding a Kubernetes cluster by generating bootstrap tokens and providing the necessary command to join additional nodes, whether they are worker nodes or additional control plane nodes.
+
+In the next section, we'll actually bootstrap the cluster.
