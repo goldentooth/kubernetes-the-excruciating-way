@@ -11,3 +11,5 @@
 - [Configuring Packages](./009_configuring_packages.md)
 - [Installing Packages](./010_installing_packages.md)
 - [`kubeadm init`](./011_kubeadm_init.md)
+- [Bootstrapping the First Control Plane Node](./012_bootstrapping_1.md)
+- [Joining the Rest of the Control Plane](./013_bootstrapping_2.md)
