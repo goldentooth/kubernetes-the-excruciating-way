@@ -15,3 +15,5 @@
 - [Joining the Rest of the Control Plane](./013_bootstrapping_2.md)
 - [Admitting the Worker Nodes](./014_bootstrapping_3.md)
 - [Where Do We Go From Here?](./015_where_do_we_go_from_here.md)
+- [Installing Helm](./016_installing_helm.md)
+- [Installing Argo CD](./017_installing_argo_cd.md)
