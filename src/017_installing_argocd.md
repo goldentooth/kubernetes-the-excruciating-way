@@ -1,8 +1,12 @@
 # Installing Argo CD
 
-Argo CD is a large, complicated application in its own right; its Helm chart is thousands of lines long. I'm not trying to learn it all right now, and fortunately, I have a fairly simple structure in mind; build out our applications with an app-of-apps pattern from a public git repository hosted on GitHub. That's about as vanilla as it gets.
+GitOps is a methodology based around treating IaC stored in Git as a source of truth for the desired state of the infrastructure. Put simply, whatever you push to `main` becomes the desired state and your IaC systems, whether they be Terraform, Ansible, etc, will be invoked to bring the actual state into alignment.
 
-I'll install Argo CD via a new Ansible [playbook](https://github.com/goldentooth/cluster/blob/main/playbooks/install_argocd.yaml) and [role](https://github.com/goldentooth/cluster/tree/main/roles/goldentooth.install_argocd).
+Argo CD is a popular system for implementing GitOps with Kubernetes. It can observe a Git repository for changes and react to those changes accordingly, creating/destroying/replacing resources as needed within the cluster.
+
+Argo CD is a large, complicated application in its own right; its Helm chart is thousands of lines long. I'm not trying to learn it all right now, and fortunately, I have a fairly simple structure in mind.
+
+I'll install Argo CD via a new Ansible [playbook](https://github.com/goldentooth/cluster/blob/main/playbooks/install_argocd.yaml) and [role](https://github.com/goldentooth/cluster/tree/main/roles/goldentooth.install_argocd) that use Helm, which we set up in the last section.
 
 None of this is particularly complex, but I'll document some of my values overrides here:
 
@@ -15,7 +19,7 @@ None of this is particularly complex, but I'll document some of my values overri
 # override the names of certain components when port forwarding.
 # See https://github.com/argoproj/argo-cd/issues/16266 for details.
 # As a result, I've gone through and reverted my changes to standardize as much
-# as possible on `argocd`.
+# as possible on `argocd`. FML.
 nameOverride: 'argocd'
 global:
   # This evaluates to `argocd.goldentooth.hellholt.net`.

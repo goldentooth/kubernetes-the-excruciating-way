@@ -1,6 +1,6 @@
 # Installing Helm
 
-I have a lot of ambitions for this cluster, but after some deliberation, the thing I most want to do right now is deploy something _to_ Kubernetes. Plus, I want to finally put something in my [GitOps](https://github.com/goldentooth/gitops) repository.
+I have a lot of ambitions for this cluster, but after some deliberation, the thing I most want to do right now is deploy something _to_ Kubernetes.
 
 So I'll be starting out by installing Argo CD, and I'll do that... soon. In the next chapter. I decided to install Argo CD via Helm, since I expect that Helm will be useful in other situations as well, e.g. trying out applications before I commit (no pun intended) to bringing them into GitOps.
 
