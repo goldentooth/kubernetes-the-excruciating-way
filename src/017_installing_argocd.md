@@ -80,10 +80,10 @@ applicationSet:
   replicas: 2
 ```
 
-![Pods in the Argo CD namespace](./images/argo_cd_pods.png)
+![Pods in the Argo CD namespace](./images/argocd_pods.png)
 
 After running `kubectl -n argocd port-forward service/argocd-server 8081:443 --address 0.0.0.0` on one of my control plane nodes, I'm able to view the web interface, log in, and see that the repository is connectable but that there's nothing interesting in it.
 
-![Argo CD web interface](./images/argo_cd.png)
+![Argo CD web interface](./images/argocd.png)
 
 I'll try to improve this situation shortly.

@@ -41,3 +41,88 @@ spec:
 This actually more-or-less matches the `default` AppProject that Argo CD automatically installed, with the exception that I don't permit anything to be installed into the `kube-system` namespace. I don't anticipate that being a problem, and it makes me feel mildly more responsible.
 
 This project will allow me to play with various applications in a permissive context and, when I'm reasonably satisfied with the configuration, I can shift it into a different project, application(s), and repository with more restrictive settings.
+
+The AppProject is quite simple:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: incubator
+  # Argo CD resources need to deploy into the Argo CD namespace.
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: GoldenTooth incubator project
+  # Allow manifests to deploy from any Git repository.
+  # This is an acceptable security risk because this is a lab environment.
+  sourceRepos:
+    - '*'
+  destinations:
+    # Prevent any resources from deploying into the kube-system namespace.
+    - namespace: '!kube-system'
+      server: '*'
+    # Allow resources to deploy into any other namespace.
+    - namespace: '*'
+      server: '*'
+  clusterResourceWhitelist:
+    # Allow any cluster resources to deploy.
+    - group: '*'
+      kind: '*'
+```
+
+as is the Application:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: incubator
+  namespace: argocd
+  labels:
+    name: incubator
+    managed-by: argocd
+spec:
+  project: incubator
+  source:
+    repoURL: "https://github.com/goldentooth/incubator.git"
+    path: './'
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  syncOptions:
+    - Validate=true
+    - CreateNamespace=true
+    - PrunePropagationPolicy=foreground
+    - PruneLast=true
+    - RespectIgnoreDifferences=true
+    - ApplyOutOfSyncOnly=true
+```
+
+Of course, these can be viewed in their Ansible form [here](https://github.com/goldentooth/cluster/blob/main/roles/goldentooth.install_argocd_apps/tasks/projects/incubator.yaml).
+
+The `incubator` repository is very barebones at this point, just four files. The two that matter are:
+
+```yaml
+# Chart.yaml
+apiVersion: 'v2'
+name: 'incubator'
+description: 'Incubating Applications'
+type: 'application'
+version: '0.0.1'
+appVersion: '0.0.1'
+```
+
+```yaml
+# values.yaml
+spec:
+```
+
+That's sufficient to get us a successfully-syncing application:
+
+![Argo CD Incubator App](./images/argocd_incubator.png)
