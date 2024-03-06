@@ -18,3 +18,4 @@
 - [Installing Helm](./016_installing_helm.md)
 - [Installing Argo CD](./017_installing_argocd.md)
 - [The "Incubator" GitOps Application](./018_the_incubator_gitops_application.md)
+- [Prometheus Node Exporter](./019_prometheus_node_exporter.md)
