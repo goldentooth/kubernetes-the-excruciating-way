@@ -82,8 +82,6 @@ applicationSet:
 
 ![Pods in the Argo CD namespace](./images/argocd_pods.png)
 
-After running `kubectl -n argocd port-forward service/argocd-server 8081:443 --address 0.0.0.0` on one of my control plane nodes, I'm able to view the web interface, log in, and see that the repository is connectable but that there's nothing interesting in it.
-
-![Argo CD web interface](./images/argocd.png)
+After running `kubectl -n argocd port-forward service/argocd-server 8081:443 --address 0.0.0.0` on one of my control plane nodes, I'm able to view the web interface, log in, but there's nothing interesting.
 
 I'll try to improve this situation shortly.

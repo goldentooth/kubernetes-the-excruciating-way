@@ -1595,3 +1595,5 @@ promhttp_metric_handler_requests_total{code="200"} 0
 promhttp_metric_handler_requests_total{code="500"} 0
 promhttp_metric_handler_requests_total{code="503"} 0
 ```
+
+We can go ahead and migrate this to [a separate repository](https://github.com/goldentooth/prometheus_node_exporter/). This isn't a complicated application by itself, but that's what makes it a good test of the general approach we'll use in the future.
