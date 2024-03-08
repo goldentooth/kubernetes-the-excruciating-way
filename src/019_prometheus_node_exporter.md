@@ -1596,4 +1596,8 @@ promhttp_metric_handler_requests_total{code="500"} 0
 promhttp_metric_handler_requests_total{code="503"} 0
 ```
 
-We can go ahead and migrate this to [a separate repository](https://github.com/goldentooth/prometheus_node_exporter/). This isn't a complicated application by itself, but that's what makes it a good test of the general approach we'll use in the future.
+So... yay?
+
+We could shift this to a separate repository, or we can just rip it back out of the incubator and create a separate `Application` resource for it in [this task file](https://github.com/goldentooth/cluster/blob/main/roles/goldentooth.install_argocd_apps/tasks/applications/prometheus_node_exporter.yaml). We could organize it a thousand different ways. A `prometheus_node_exporter` repository? A `prometheus` repository? A `monitoring` repository?
+
+Because I'm not really sure _which_ I'd like to do, I'll just defer the decision until a later date and move on to other things.
