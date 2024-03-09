@@ -22,3 +22,4 @@
 - [Router BGP Configuration](./020_router_bgp_configuration.md)
 - [MetalLB](./021_metallb.md)
 - [Testing MetalLB](./022_testing_metallb.md)
+- [Refactoring Argo CD](./023_refactoring_argocd.md)
