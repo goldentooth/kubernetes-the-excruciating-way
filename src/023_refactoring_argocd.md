@@ -99,3 +99,5 @@ Clicking into it, we'll see all of the resources deployed by the `metallb` Helm 
 ![metallb contents](./images/023_metallb_contents.png)
 
 A quick test to verify that our `httpbin` application is still assigned a working load balancer, and we can declare victory!
+
+While I'm here, I might as well shift `httpbin` and `prometheus-node-exporter` as well...
