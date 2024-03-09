@@ -4,10 +4,10 @@ Admitting the worker nodes to the cluster is simple; we just have the first cont
 
 And voilà! We have a functioning cluster.
 
-![Voilà](./images/voila.png)
+![Voilà](./images/014_voila.png)
 
 We can also see that the cluster is functioning well from HAProxy's perspective:
 
-![HAProxy Stats 2](./images/haproxy_stats_2.png)
+![HAProxy Stats 2](./images/014_haproxy_stats_2.png)
 
 As a reminder, this is all persisted in the [Ansible tasks](https://github.com/goldentooth/cluster/blob/main/roles/goldentooth.bootstrap_k8s/tasks/main.yaml).

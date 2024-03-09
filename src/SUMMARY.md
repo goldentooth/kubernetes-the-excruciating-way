@@ -19,3 +19,5 @@
 - [Installing Argo CD](./017_installing_argocd.md)
 - [The "Incubator" GitOps Application](./018_the_incubator_app_of_apps.md)
 - [Prometheus Node Exporter](./019_prometheus_node_exporter.md)
+- [Router BGP Configuration](./020_router_bgp_configuration.md)
+- [MetalLB](./021_metallb.md)

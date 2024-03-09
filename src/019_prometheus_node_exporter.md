@@ -39,7 +39,7 @@ spec:
 
 We'll soon see the resources created:
 
-![Prometheus Node Exporter project running in Argo CD](./images/argocd_prometheus_node_exporter.png)
+![Prometheus Node Exporter project running in Argo CD](./images/019_argocd_prometheus_node_exporter.png)
 
 And we can `curl` a metric butt-ton of information:
 

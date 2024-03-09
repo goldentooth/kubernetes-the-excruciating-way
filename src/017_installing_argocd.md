@@ -80,7 +80,7 @@ applicationSet:
   replicas: 2
 ```
 
-![Pods in the Argo CD namespace](./images/argocd_pods.png)
+![Pods in the Argo CD namespace](./images/017_argocd_pods.png)
 
 After running `kubectl -n argocd port-forward service/argocd-server 8081:443 --address 0.0.0.0` on one of my control plane nodes, I'm able to view the web interface, log in, but there's nothing interesting.
 

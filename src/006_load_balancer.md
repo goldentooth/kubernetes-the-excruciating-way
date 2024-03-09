@@ -8,7 +8,7 @@ This might sound complex, but all we're doing is:
 - configuring the load balancer to use all of the control plane nodes as a list of backends
 - telling anything that sends requests to a control plane node to send them to the load balancer instead
 
-![High-Availability for Dummies](./images/ha_for_dummies.png)
+![High-Availability for Dummies](./images/006_ha_for_dummies.png)
 
 As mentioned before, we're using HAProxy as a load balancer. First, though, I'll install `rsyslog`, a log processing system. It will gather logs from HAProxy and deposit them in a more ergonomic location.
 
@@ -128,7 +128,7 @@ backend k8s-api-server
 
 This enables the HAProxy stats frontend, which allows us to gain some insight into the operation of the frontend in something like realtime.
 
-![HAProxy Stats](./images/haproxy_stats.png)
+![HAProxy Stats](./images/006_haproxy_stats.png)
 
 We see that our backends are unavailable, which is of course expected at this time. We can also read the logs, in `/var/log/haproxy.log`:
 

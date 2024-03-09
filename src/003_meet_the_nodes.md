@@ -9,71 +9,71 @@ In my experience, when I'm working in multiple servers simultaneously, it's good
 This is just me being a bit over-the-top, I guess.
 
 ## ✋ Allyrion
-- **Prompt**: [Link](./images/ps1_allyrion.png)
-- **MoTD**: [Link](./images/motd_allyrion.png)
+- **Prompt**: [Link](./images/003_ps1_allyrion.png)
+- **MoTD**: [Link](./images/003_motd_allyrion.png)
 - **Role**: Load Balancer
 - **MAC Address**: d8:3a:dd:8a:7d:aa
 - **IP Address**: 10.4.0.10
 
 ## 🐞 Bettley
-- **Prompt**: [Link](./images/ps1_bettley.png)
-- **MoTD**: [Link](./images/motd_bettley.png)
+- **Prompt**: [Link](./images/003_ps1_bettley.png)
+- **MoTD**: [Link](./images/003_motd_bettley.png)
 - **Role**: Control Plane 1
 - **MAC Address**: d8:3a:dd:89:c1:0b
 - **IP Address**: 10.4.0.11
 
 ## 🦢 Cargyll
-- **Prompt**: [Link](./images/ps1_cargyll.png)
-- **MoTD**: [Link](./images/motd_cargyll.png)
+- **Prompt**: [Link](./images/003_ps1_cargyll.png)
+- **MoTD**: [Link](./images/003_motd_cargyll.png)
 - **Role**: Worker
 - **MAC Address**: d8:3a:dd:8a:7d:ef
 - **IP Address**: 10.4.0.12
 
 ## 🍋 Dalt
-- **Prompt**: [Link](./images/ps1_dalt.png)
-- **MoTD**: [Link](./images/motd_dalt.png)
+- **Prompt**: [Link](./images/003_ps1_dalt.png)
+- **MoTD**: [Link](./images/003_motd_dalt.png)
 - **Role**: Worker
 - **MAC Address**: d8:3a:dd:8a:7e:9a
 - **IP Address**: 10.4.0.13
 
 ## 🦩 Erenford
-- **Prompt**: [Link](./images/ps1_erenford.png)
-- **MoTD**: [Link](./images/motd_erenford.png)
+- **Prompt**: [Link](./images/003_ps1_erenford.png)
+- **MoTD**: [Link](./images/003_motd_erenford.png)
 - **Role**: Worker
 - **MAC Address**: d8:3a:dd:8a:80:3c
 - **IP Address**: 10.4.0.14
 
 ## 🌺 Fenn
-- **Prompt**: [Link](./images/ps1_fenn.png)
-- **MoTD**: [Link](./images/motd_fenn.png)
+- **Prompt**: [Link](./images/003_ps1_fenn.png)
+- **MoTD**: [Link](./images/003_motd_fenn.png)
 - **Role**: Control Plane 2
 - **MAC Address**: d8:3a:dd:89:ef:61
 - **IP Address**: 10.4.0.15
 
 ## 🧤 Gardener
-- **Prompt**: [Link](./images/ps1_gardener.png)
-- **MoTD**: [Link](./images/motd_gardener.png)
+- **Prompt**: [Link](./images/003_ps1_gardener.png)
+- **MoTD**: [Link](./images/003_motd_gardener.png)
 - **Role**: Control Plane 3
 - **MAC Address**: d8:3a:dd:89:aa:7d
 - **IP Address**: 10.4.0.16
 
 ## 🌳 Harlton
-- **Prompt**: [Link](./images/ps1_harlton.png)
-- **MoTD**: [Link](./images/motd_harlton.png)
+- **Prompt**: [Link](./images/003_ps1_harlton.png)
+- **MoTD**: [Link](./images/003_motd_harlton.png)
 - **Role**: Worker
 - **MAC Address**: d8:3a:dd:89:f9:23
 - **IP Address**: 10.4.0.17
 
 ## 🏁 Inchfield
-- **Prompt**: [Link](./images/ps1_inchfield.png)
-- **MoTD**: [Link](./images/motd_inchfield.png)
+- **Prompt**: [Link](./images/003_ps1_inchfield.png)
+- **MoTD**: [Link](./images/003_motd_inchfield.png)
 - **Role**: Worker
 - **MAC Address**: d8:3a:dd:89:fa:fc
 - **IP Address**: 10.4.0.18
 
 ## 🦁 Jast
-- **Prompt**: [Link](./images/ps1_jast.png)
-- **MoTD**: [Link](./images/motd_jast.png)
+- **Prompt**: [Link](./images/003_ps1_jast.png)
+- **MoTD**: [Link](./images/003_motd_jast.png)
 - **Role**: Worker
 - **MAC Address**: d8:3a:dd:89:f0:4b
 - **IP Address**: 10.4.0.19

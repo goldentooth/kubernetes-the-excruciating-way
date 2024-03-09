@@ -2,7 +2,7 @@
 
 ## Who am I?
 
-![Who I am](./images/who_am_i.jpeg)
+![Who I am](./images/001_who_am_i.jpeg)
 
 _A portrait of the author in the form he will assume over the course of this project, having returned to our time to warn his present self against pursuing this course of action._
 
@@ -10,7 +10,7 @@ My name is Nathan Douglas. The best source of information about my electronic li
 
 ## What Do I Do?
 
-![What I'll Be Doing](./images/what_ill_be_doing.png)
+![What I'll Be Doing](./images/001_what_ill_be_doing.png)
 _The author in his eventual form advising the author in his present form not to do the thing, and why._
 
 I've been trying to get computers to do what I want, with mixed success, since the early mid-nineties. I earned my Bachelor's in Computer Science from the University of Nevada at Las Vegas in 2011, and I've been working as a software/DevOps engineer ever since, depending on gig.
@@ -19,7 +19,7 @@ I consider myself a DevOps Engineer. I consider DevOps a methodology _and_ a rol
 
 ## Background
 
-![VMWare Workstation](./images/vmware.jpg)
+![VMWare Workstation](./images/001_vmware.jpg)
 
 _"What would you do if you had an AMD K6-2 333MHz and 96MB RAM?"_
 _"I'd run **two** copies of Windows 98, my dude."_

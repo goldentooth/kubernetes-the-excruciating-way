@@ -84,4 +84,4 @@ spec:
 
 That's sufficient to get it to pop up in the Applications view in Argo CD.
 
-![Argo CD Incubator](./images/argocd_incubator.png)
+![Argo CD Incubator](./images/018_argocd_incubator.png)

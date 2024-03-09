@@ -44,7 +44,7 @@ Well, probably nothing interesting. Not Plex, not torrent clients or *darrs. Mos
 
 In case you don't quite have a picture of the infrastructure so far, it should look like this:
 
-![Network Topology](./images/topology.png)
+![Network Topology](./images/005_topology.png)
 
 ## Frequently Asked Questions
 
