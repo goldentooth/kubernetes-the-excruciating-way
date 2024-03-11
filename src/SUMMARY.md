@@ -25,3 +25,4 @@
 - [Refactoring Argo CD](./023_refactoring_argocd.md)
 - [Giving Argo CD a Load Balancer](./024_argocd_load_balancer.md)
 - [ExternalDNS](./025_external_dns.md)
+- [Killing the Incubator](./026_killing_the_incubator.md)
