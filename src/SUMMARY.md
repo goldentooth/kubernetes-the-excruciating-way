@@ -27,3 +27,4 @@
 - [ExternalDNS](./025_external_dns.md)
 - [Killing the Incubator](./026_killing_the_incubator.md)
 - [Welcome Back](./027_welcome_back.md)
+- [NFS Exports](./028_nfs_exports.md)
