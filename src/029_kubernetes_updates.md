@@ -163,6 +163,8 @@ _____________________________________________________________________
 
 Of course, I won't automate the actual upgrade process; that seems unwise.
 
+I'm skipping certificate renewal because I'd like to fight with one thing at a time.
+
 ```bash
 $ sudo kubeadm upgrade apply v1.30.11 --certificate-renewal=false
 [preflight] Running pre-flight checks.
@@ -221,4 +223,10 @@ W0403 11:23:42.086815  566901 checks.go:844] detected that the sandbox image "re
 ```
 
 The next steps for the other two control plane nodes are fairly straightforward. This mostly just consisted of duplicating the playbook block to add a new step for when the playbook is executed with the 'other_control_plane' tag and adding that tag to the steps already added in the `setup_k8s` role.
+
+```bash
+$ goldentooth command cargyll,dalt 'sudo kubeadm upgrade node --certificate-renewal=false'
+```
+
+And a few minutes later, both of the remaining control plane nodes have updated.
 
