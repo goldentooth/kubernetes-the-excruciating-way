@@ -225,8 +225,70 @@ W0403 11:23:42.086815  566901 checks.go:844] detected that the sandbox image "re
 The next steps for the other two control plane nodes are fairly straightforward. This mostly just consisted of duplicating the playbook block to add a new step for when the playbook is executed with the 'other_control_plane' tag and adding that tag to the steps already added in the `setup_k8s` role.
 
 ```bash
-$ goldentooth command cargyll,dalt 'sudo kubeadm upgrade node --certificate-renewal=false'
+$ goldentooth command cargyll,dalt 'sudo kubeadm upgrade node'
 ```
 
 And a few minutes later, both of the remaining control plane nodes have updated.
 
+The next step is to upgrade the kubelet in each node.
+
+Serially, for obvious reasons, we need to drain each node (from a control plane node), upgrade the kubelet (unhold, upgrade, hold), then uncordon the node (again, from a control plane node).
+
+That's not too bad, and it's included in the latest changes to the `upgrade_k8s` role.
+
+The final step is upgrading `kubectl` on each of the control plane nodes, which is a comparative cakewalk.
+
+```bash
+$ sudo kubectl version
+Client Version: v1.30.11
+Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+Server Version: v1.30.11
+```
+
+Nice!
+
+## 1.30 -> 1.31
+
+Now that the Ansible playbook and role are fleshed out, the process moving forward is comparatively simple.
+
+1. Change the `k8s_version_clean` variable to `1.31`.
+2. `goldentooth setup_k8s_apt`
+3. `goldentooth upgrade_k8s --tags=kubeadm_first`
+4. `goldentooth command bettley 'kubeadm version'`
+5. `goldentooth command bettley 'sudo kubeadm upgrade plan'`
+6. `goldentooth command bettley 'sudo kubeadm upgrade apply v1.31.7 --certificate-renewal=false -y'`
+7. `goldentooth upgrade_k8s --tags=kubeadm_rest`
+8. `goldentooth command cargyll,dalt 'sudo kubeadm upgrade node'`
+9. `goldentooth upgrade_k8s --tags=kubelet`
+10. `goldentooth upgrade_k8s --tags=kubectl`
+
+## 1.31 -> 1.32
+
+Hell, this is kinda fun now.
+
+1. Change the `k8s_version_clean` variable to `1.32`.
+2. `goldentooth setup_k8s_apt`
+3. `goldentooth upgrade_k8s --tags=kubeadm_first`
+4. `goldentooth command bettley 'kubeadm version'`
+5. `goldentooth command bettley 'sudo kubeadm upgrade plan'`
+6. `goldentooth command bettley 'sudo kubeadm upgrade apply v1.32.3 --certificate-renewal=false -y'`
+7. `goldentooth upgrade_k8s --tags=kubeadm_rest`
+8. `goldentooth command cargyll,dalt 'sudo kubeadm upgrade node'`
+9. `goldentooth upgrade_k8s --tags=kubelet`
+10. `goldentooth upgrade_k8s --tags=kubectl`
+
+And eventually, everything is fine:
+
+```bash
+$ sudo kubectl get nodes
+NAME        STATUS   ROLES           AGE    VERSION
+bettley     Ready    control-plane   286d   v1.32.3
+cargyll     Ready    control-plane   286d   v1.32.3
+dalt        Ready    control-plane   286d   v1.32.3
+erenford    Ready    <none>          286d   v1.32.3
+fenn        Ready    <none>          286d   v1.32.3
+gardener    Ready    <none>          286d   v1.32.3
+harlton     Ready    <none>          286d   v1.32.3
+inchfield   Ready    <none>          286d   v1.32.3
+jast        Ready    <none>          286d   v1.32.3
+```
