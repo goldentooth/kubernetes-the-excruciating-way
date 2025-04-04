@@ -42,3 +42,14 @@ NodeName=bettley Arch=aarch64 CoresPerSocket=4
 ... etc ...
 ```
 
+The next step is to set up Lua and Lmod for managing environments. This itself isn't terribly fun or interesting. Lmod is on sourceforge, Lua is in Apt, we install some things, build Lmod from source, create some symlinks, and when we shell in and type a command, we can list our modules.
+
+```bash
+$ module av
+
+------------------------------------------------------------------ /mnt/nfs/slurm/apps/modulefiles -------------------------------------------------------------------
+   StdEnv
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+```
