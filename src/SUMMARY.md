@@ -30,3 +30,13 @@
 - [NFS Exports](./028_nfs_exports.md)
 - [Kubernetes Updates](./029_kubernetes_updates.md)
 - [Fixing MetalLB](./030_fixing_metallb.md)
+- [NFS Mounts](./031_nfs_mounts.md)
+- [Slurm](./032_slurm.md)
+
+<!--
+  Slurm apps
+  Kubeflow
+  MLflow
+  DVC
+
+-->
