@@ -2,6 +2,8 @@
 
 Okay, finally, geez.
 
+So this is about [Slurm](https://slurm.schedmd.com), an open-source, highly scalable, and fault-tolerant cluster management and job-scheduling system.
+
 First, we're going to set up MUNGE, which is an authentication service designed for scalability within HPC environments. This is just a matter of installing the `munge` package, synchronizing the MUNGE key across the cluster (which isn't as ergonomic as I'd like, but oh well), and restarting the service.
 
 Slurm itself isn't too complex to install, but we want to switch off `slurmctld` for the compute nodes and on for the controller nodes.
